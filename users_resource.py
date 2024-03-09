@@ -40,7 +40,8 @@ class NewsListResource(Resource):
         return jsonify(
             {
                 'user': [item.to_dict(only=(
-                    'surname', 'name', 'age')) for item in users]
+                    'surname', 'name', 'age', 'position', 'speciality', 'address', 'hashed_password', 
+                    'email')) for item in users]
             }
         )
 
